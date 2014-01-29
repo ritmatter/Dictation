@@ -21,8 +21,8 @@ class PitchReader:
         if frequency == 0:
             return 0;
         
-        freqConst = float(frequency)/1000.0
-        return 3.64 * freqConst**(-0.8) - 6.5 * math.exp(-0.6 * (freqConst - 3.3)**2) + 10**(-3) * freqConst**4
+        freq_const = float(frequency)/1000.0
+        return 3.64 * freq_const**(-0.8) - 6.5 * math.exp(-0.6 * (freq_const - 3.3)**2) + 10**(-3) * freq_const**4
         
     def analyzePitches(self, music_file):
         s = source(music_file, self.sample_rate, self.hop_size)
