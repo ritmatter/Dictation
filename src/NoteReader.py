@@ -21,6 +21,9 @@ class NoteReader:
             freq_list.append(key)
         return sorted(freq_list)
     
+    def mapNote(self, freq):
+        return self.note_book[freq]
+    
     def printNoteBook(self):
         for key in self.note_book.keys():
             print "{},{}".format(key, self.note_book[key])

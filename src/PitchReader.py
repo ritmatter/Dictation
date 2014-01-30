@@ -50,5 +50,9 @@ class PitchReader:
         for i in range (0, len(self.pitch_data[0])):
             f.write(str(self.pitch_data[0][i]) + "  " + str(self.pitch_data[1][i]) + "  " + str(self.pitch_data[2][i]) + '\n')
         f.close()
+    
+    def printPitches(self):
+        for i in range (0, len(self.pitch_data[0])):
+            print "{}, {}, {}".format(self.pitch_data[0][i], self.pitch_data[1][i], self.pitch_data[2][i])
             
             
